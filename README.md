@@ -1,1 +1,1 @@
-# GBL-todo
+# Training project with JS only.
