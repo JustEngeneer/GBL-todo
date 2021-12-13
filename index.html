@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBL-todo-list</title>
+    <!-- Favicon start -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Favicon end -->
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body>
+    <div class="wrapper__all">
+        <h1 class="login__title">Login Page</h1>
+        <form action="#!" class="login__form" name="loginForm">
+            <!-- Email -->
+            <label class="login__form__label">
+                Email *
+                <input type="email" class="login__form__input" placeholder="example@gmail.com" name="email" required>
+                <h3 class="login__form__wrong login__form__wrong_email">Wrong email</h3>
+            </label>
+            <!-- Password -->
+            <label class="login__form__label">
+                Password *
+                <input type="password" class="login__form__input" placeholder="Enter your password, 8 min, 12 max" name="passw" required>
+                <h3 class="login__form__wrong login__form__wrong_pass">Wrong password</h3>
+            </label>
+            <input type="submit" class="login__form__submit" value="Login" name="submit">
+        </form>    
+        <p class="alert">
+            The fields with * character are required to fill
+        </p>
+    </div> 
+    <script src="./js/main.js"></script>   
+</body>
+</html>
