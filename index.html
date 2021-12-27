@@ -9,7 +9,9 @@
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <!--  There are some troubles with this manifest
     <link rel="manifest" href="img/favicon/site.webmanifest">
+    -->    
     <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="shortcut icon" href="img/favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#da532c">
@@ -25,14 +27,14 @@
             <!-- Email -->
             <label class="login__form__label">
                 Email *
-                <input type="email" class="login__form__input" placeholder="example@gmail.com" name="email" required>
-                <h3 class="login__form__wrong login__form__wrong_email">Wrong email</h3>
+                <input type="text" class="login__form__input" placeholder="example@gmail.com" name="email" required>
+                <h3 id="wrongLogin" class="login__form__wrong login__form__wrong_off">Wrong email</h3>
             </label>
             <!-- Password -->
             <label class="login__form__label">
                 Password *
-                <input type="password" class="login__form__input" placeholder="Enter your password, 8 min, 12 max" name="passw" required>
-                <h3 class="login__form__wrong login__form__wrong_pass">Wrong password</h3>
+                <input type="password" class="login__form__input" minlength="8" maxlength="12" placeholder="Enter your password, 8 min, 12 max" name="passw" required>
+                <h3 id="wrongPassw" class="login__form__wrong login__form__wrong_off">Wrong password</h3>
             </label>
             <input type="submit" class="login__form__submit" value="Login" name="submit">
         </form>    
@@ -40,6 +42,9 @@
             The fields with * character are required to fill
         </p>
     </div> 
+    <!-- Js -->
+    <script src="./js/loginVerification.js"></script>   
+    <script src="./js/todoList.js"></script>   
     <script src="./js/main.js"></script>   
 </body>
 </html>

@@ -13,7 +13,13 @@
         color: red;
         margin-left: 20px;
         margin-bottom: 20px;
-        visibility: hidden;
+
+        &_off{
+            visibility: hidden;
+        }
+        &_on{
+            visibility: visible;
+        }
     }
     &__submit{
         position: absolute;

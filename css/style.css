@@ -418,7 +418,14 @@ input {
   color: red;
   margin-left: 20px;
   margin-bottom: 20px;
+}
+
+.login__form__wrong_off {
   visibility: hidden;
+}
+
+.login__form__wrong_on {
+  visibility: visible;
 }
 
 .login__form__submit {
