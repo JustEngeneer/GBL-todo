@@ -6,5 +6,5 @@ todoList = JSON.parse(localStorage.getItem('todoList'));
 if( todoList == undefined ) todoList = [];
 
 const showTodo = function() {
-    alert('It is time to show the todo list!!!');
+    // alert('It is time to show the todo list!!!');
 }

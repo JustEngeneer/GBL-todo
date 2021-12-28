@@ -363,6 +363,7 @@ textarea {
   padding: 0.2em 0;
 }
 
+/* Common start */
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -401,6 +402,15 @@ input {
           border-radius: 7px;
 }
 
+.element__on_block {
+  display: block;
+}
+
+.element__off {
+  display: none;
+}
+
+/* Common end */
 /* Login start */
 .login__title {
   font-size: 60px;
@@ -434,7 +444,7 @@ input {
   font-size: 24px;
   width: 150px;
   height: 50px;
-  background-color: #4646fc;
+  background-color: #6534ee;
   -webkit-border-radius: 5px;
           border-radius: 5px;
   color: #f3e8e8;
@@ -442,7 +452,7 @@ input {
 
 .login__form__submit:hover, .login__form__submit:active, .login__form__submit:focus {
   font-size: 28px;
-  background-color: rgba(70, 70, 252, 0.9);
+  background-color: rgba(101, 33, 211, 0.9);
 }
 
 .alert {
@@ -450,4 +460,30 @@ input {
 }
 
 /* Login end */
+/* todo start */
+.todo__header {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.todo__new-text {
+  width: 390px;
+  height: 100px;
+  margin-top: 30px;
+  border: none;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+}
+
+.todo__add-button {
+  width: 100px;
+  height: 40px;
+  color: #f3e8e8;
+  background-color: #6534ee;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  margin-top: 90px;
+}
+
+/* todo end */
 /*# sourceMappingURL=style.css.map */

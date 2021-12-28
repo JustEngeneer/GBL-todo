@@ -27,13 +27,13 @@
         font-size: 24px;
         width: 150px;
         height: 50px;
-        background-color: rgb(70, 70, 252);
+        background-color: $blue;
         border-radius: 5px;
         color: rgb(243, 232, 232);
 
         &:hover, &:active, &:focus{
             font-size: 28px;
-            background-color: rgba(70, 70, 252, 0.9);
+            background-color: rgba(101, 33, 211, 0.9);
         }
     }
 }

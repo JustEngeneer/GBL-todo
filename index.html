@@ -21,27 +21,37 @@
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
-    <div class="wrapper__all">
-        <h1 class="login__title">Login Page</h1>
-        <form action="#!" class="login__form" name="loginForm">
-            <!-- Email -->
-            <label class="login__form__label">
-                Email *
-                <input type="text" class="login__form__input" placeholder="example@gmail.com" name="email" required>
-                <h3 id="wrongLogin" class="login__form__wrong login__form__wrong_off">Wrong email</h3>
-            </label>
-            <!-- Password -->
-            <label class="login__form__label">
-                Password *
-                <input type="password" class="login__form__input" minlength="8" maxlength="12" placeholder="Enter your password, 8 min, 12 max" name="passw" required>
-                <h3 id="wrongPassw" class="login__form__wrong login__form__wrong_off">Wrong password</h3>
-            </label>
-            <input type="submit" class="login__form__submit" value="Login" name="submit">
-        </form>    
-        <p class="alert">
-            The fields with * character are required to fill
-        </p>
-    </div> 
+    <div id = "login" class="element__off">
+        <div class="wrapper__all">
+            <h1 class="login__title">Login Page</h1>
+            <form action="#!" class="login__form" name="loginForm">
+                <!-- Email -->
+                <label class="login__form__label">
+                    Email *
+                    <input type="text" class="login__form__input" placeholder="example@gmail.com" name="email" required>
+                    <h3 id="wrongLogin" class="login__form__wrong login__form__wrong_off">Wrong email</h3>
+                </label>
+                <!-- Password -->
+                <label class="login__form__label">
+                    Password *
+                    <input type="password" class="login__form__input" minlength="8" maxlength="12" placeholder="Enter your password, 8 min, 12 max" name="passw" required>
+                    <h3 id="wrongPassw" class="login__form__wrong login__form__wrong_off">Wrong password</h3>
+                </label>
+                <input type="submit" class="login__form__submit" value="Login" name="submit">
+            </form>    
+            <p class="alert">
+                The fields with * character are required to fill
+            </p>
+        </div> 
+    </div>
+    <div id="todo" class="element__on">
+        <div class="wrapper__all">
+            <h2 class="todo__header">TODO LIST</h2>
+
+            <textarea class="todo__new-text">The text of your new assignment could be here.</textarea>
+            <button class="todo__add-button">ADD</button>
+        </div>    
+    </div>
     <!-- Js -->
     <script src="./js/loginVerification.js"></script>   
     <script src="./js/todoList.js"></script>   
