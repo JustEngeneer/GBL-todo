@@ -46,10 +46,32 @@
     </div>
     <div id="todo" class="element__on">
         <div class="wrapper__all">
+            <!-- todo header -->
             <h2 class="todo__header">TODO LIST</h2>
 
             <textarea class="todo__new-text">The text of your new assignment could be here.</textarea>
             <button class="todo__add-button">ADD</button>
+            <!-- todo filter -->
+            <div class="todo__filter">
+                <!-- todo filter data -->
+                <div class="todo__data todo__data_filter">
+                    <button class="todo__data__filter todo__data__filter-up"></button>
+                    <button class="todo__data__filter todo__data__filter-down"></button>
+                </div>
+                <!-- todo filter priority -->
+                <div class="todo__priority todo__priority_filter">
+                    <button class="todo__priority__filter"></button>
+                    <img    class="todo__priority__numbers" src="./img/Numbers.png" alt="Here you could see the beautiful numbers">
+                    <button class="todo__priority__filter todo__priority__filter-down"></button>
+                </div>
+                <!-- todo filter description and submit -->
+                <input type="text" class="todo__desc__filter">
+                <!-- todo filter actions -->
+                <div class="todo__actions todo__actions_filter">
+
+                </div>
+            </div>
+
         </div>    
     </div>
     <!-- Js -->

@@ -5,7 +5,7 @@
 }
 
 .todo__new-text{
-    width: 390px; 
+    width: 88%; 
     height: 100px;
     margin-top: 30px;
     border: none;
@@ -18,6 +18,88 @@
     color: rgb(243, 232, 232);
     background-color: $blue;
     border-radius: 5px;
-    margin-top: 90px;
+    vertical-align: bottom;
+    margin-left: 5px;
+    margin-top: 15px;
+}
+
+.todo__filter{
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+    .todo__data{
+        width: 10%;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        &__filter{
+            width: 30px;
+            height: 25px;
+            background-color: transparent;
+            background-image: url('../img/TriangleGrey.png');
+            background-size: cover;
+            border: none;
+
+            &-down{
+                transform: rotate(180deg);
+            }
+            &:hover{
+                background-color: rgb(218, 188, 188);
+            }
+            &:active{
+                border: 1px solid black;
+            }
+        }
+    }
+    .todo__priority{
+        width: 10%;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        &__filter{
+            width: 30px;
+            height: 20px;
+            background-color: transparent;
+            background-image: url('../img/TriangleGrey.png');
+            background-size: cover;
+            border: none;
+
+            &-down{
+                transform: rotate(180deg);
+            }
+            &:hover{
+                background-color: rgb(218, 188, 188);
+            }
+            &:active{
+                border: 1px solid black;
+            }
+        }
+        &__numbers{
+            width: 40px;
+            height: 15px;
+        }
+    }
+    .todo__desc__filter{
+        width: 65%;
+    }
+    /*
+    .todo__actions{
+        width: 15%;
+
+        &_filter{
+            
+        }
+    }
+    */
 }
 /* todo end */
