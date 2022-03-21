@@ -42,19 +42,15 @@
         &__filter{
             width: 30px;
             height: 25px;
-            background-color: transparent;
-            background-image: url('../img/TriangleGrey.png');
             background-size: cover;
-            border: none;
+            background-repeat: no-repeat;
 
+            &-up{
+                background-position: top;
+                background-image: url('../img/TriangleGrey.png');
+            }
             &-down{
-                transform: rotate(180deg);
-            }
-            &:hover{
-                background-color: rgb(218, 188, 188);
-            }
-            &:active{
-                border: 1px solid black;
+                background-image: url('../img/TriangleGreyDown.png');
             }
         }
     }
@@ -69,19 +65,15 @@
         &__filter{
             width: 30px;
             height: 20px;
-            background-color: transparent;
-            background-image: url('../img/TriangleGrey.png');
-            background-size: cover;
-            border: none;
+            background-size: 80%;
+            background-repeat: no-repeat;
+            background-position: center;
 
+            &-up{
+                background-image: url('../img/TriangleGrey.png');
+            }
             &-down{
-                transform: rotate(180deg);
-            }
-            &:hover{
-                background-color: rgb(218, 188, 188);
-            }
-            &:active{
-                border: 1px solid black;
+                background-image: url('../img/TriangleGreyDown.png');
             }
         }
         &__numbers{
@@ -92,14 +84,120 @@
     .todo__desc__filter{
         width: 65%;
     }
-    /*
+
+    .todo__desc{
+        width: 62%;
+        height: 40px;
+    }
     .todo__actions{
         width: 15%;
+        height: 40px;
+        margin-left: 10px;
+        background: transparent;
+        background-image: url('../img/filter-80.png');
+        background-size: 38px 38px;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
 
-        &_filter{
-            
+//    }
+}
+
+.todo__task{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+    &__dt{
+        width: 10%;
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        }
+    &__time{
+        font-size: 12px;
+    }
+
+    &__pr{
+        width: 10%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        &-val{
+            width: 50%;
+            font-size: 24px;
+            line-height: 60px;
+            text-align: center;
+            color: white;
+            background-color: darkslategrey;
+        }
+        &__btn{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        &-up{
+            width: 20px;
+            height: 20px;
+            background-image: url('../img/arrow-up.png');
+            background-size: cover;
+        }
+        &-down{
+            width: 20px;
+            height: 20px;
+            background-image: url('../img/arrow-down.png');
+            background-size: cover;
         }
     }
-    */
 }
+
+.todo__task__desc{
+    height: 60px;
+    width: 62%;
+    border: 1px solid darkblue;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+.todo__task__actions{
+    width: 15%;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    &_edit{
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: transparent;
+        background-image: url('../img/edit.png');
+        background-size: cover;
+    }
+    &_done{
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: transparent;
+        background-image: url('../img/done.png');
+        background-size: cover;
+        opacity: .4;
+    }
+    &_remove{
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: transparent;
+        background-image: url('../img/remove.png');
+        background-size: cover;
+        
+    }
+}
+
 /* todo end */

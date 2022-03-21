@@ -402,7 +402,7 @@ input {
           border-radius: 7px;
 }
 
-.element__on_block {
+.element__on {
   display: block;
 }
 
@@ -505,15 +505,6 @@ input {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 10px;
-  /*
-    .todo__actions{
-        width: 15%;
-
-        &_filter{
-            
-        }
-    }
-    */
 }
 
 .todo__filter .todo__data {
@@ -540,25 +531,18 @@ input {
 .todo__filter .todo__data__filter {
   width: 30px;
   height: 25px;
-  background-color: transparent;
-  background-image: url("../img/TriangleGrey.png");
   -webkit-background-size: cover;
           background-size: cover;
-  border: none;
+  background-repeat: no-repeat;
+}
+
+.todo__filter .todo__data__filter-up {
+  background-position: top;
+  background-image: url("../img/TriangleGrey.png");
 }
 
 .todo__filter .todo__data__filter-down {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.todo__filter .todo__data__filter:hover {
-  background-color: #dabcbc;
-}
-
-.todo__filter .todo__data__filter:active {
-  border: 1px solid black;
+  background-image: url("../img/TriangleGreyDown.png");
 }
 
 .todo__filter .todo__priority {
@@ -585,25 +569,18 @@ input {
 .todo__filter .todo__priority__filter {
   width: 30px;
   height: 20px;
-  background-color: transparent;
+  -webkit-background-size: 80% 80%;
+          background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.todo__filter .todo__priority__filter-up {
   background-image: url("../img/TriangleGrey.png");
-  -webkit-background-size: cover;
-          background-size: cover;
-  border: none;
 }
 
 .todo__filter .todo__priority__filter-down {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.todo__filter .todo__priority__filter:hover {
-  background-color: #dabcbc;
-}
-
-.todo__filter .todo__priority__filter:active {
-  border: 1px solid black;
+  background-image: url("../img/TriangleGreyDown.png");
 }
 
 .todo__filter .todo__priority__numbers {
@@ -613,6 +590,186 @@ input {
 
 .todo__filter .todo__desc__filter {
   width: 65%;
+}
+
+.todo__filter .todo__desc {
+  width: 62%;
+  height: 40px;
+}
+
+.todo__filter .todo__actions {
+  width: 15%;
+  height: 40px;
+  margin-left: 10px;
+  background: transparent;
+  background-image: url("../img/filter-80.png");
+  -webkit-background-size: 38px 38px;
+          background-size: 38px 38px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.todo__task {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+.todo__task__dt {
+  width: 10%;
+  height: 60px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo__task__time {
+  font-size: 12px;
+}
+
+.todo__task__pr {
+  width: 10%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+
+.todo__task__pr-val {
+  width: 50%;
+  font-size: 24px;
+  line-height: 60px;
+  text-align: center;
+  color: white;
+  background-color: darkslategrey;
+}
+
+.todo__task__pr__btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo__task__pr-up {
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/arrow-up.png");
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+.todo__task__pr-down {
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/arrow-down.png");
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+.todo__task__desc {
+  height: 60px;
+  width: 62%;
+  border: 1px solid darkblue;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  padding-left: 5px;
+}
+
+.todo__task__actions {
+  width: 15%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo__task__actions_edit {
+  width: 45px;
+  height: 45px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: transparent;
+  background-image: url("../img/edit.png");
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+.todo__task__actions_done {
+  width: 45px;
+  height: 45px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: transparent;
+  background-image: url("../img/done.png");
+  -webkit-background-size: cover;
+          background-size: cover;
+  opacity: .4;
+}
+
+.todo__task__actions_remove {
+  width: 45px;
+  height: 45px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: transparent;
+  background-image: url("../img/remove.png");
+  -webkit-background-size: cover;
+          background-size: cover;
 }
 
 /* todo end */

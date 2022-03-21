@@ -49,34 +49,59 @@
             <!-- todo header -->
             <h2 class="todo__header">TODO LIST</h2>
 
-            <textarea class="todo__new-text">The text of your new assignment could be here.</textarea>
-            <button class="todo__add-button">ADD</button>
+            <textarea id="taskText" class="todo__new-text" placeholder="The text of your new assignment could be here."></textarea>
+            <button id="taskadd" class="todo__add-button">ADD</button>
             <!-- todo filter -->
             <div class="todo__filter">
                 <!-- todo filter data -->
-                <div class="todo__data todo__data_filter">
+                <div class="todo__data">
                     <button class="todo__data__filter todo__data__filter-up"></button>
                     <button class="todo__data__filter todo__data__filter-down"></button>
                 </div>
                 <!-- todo filter priority -->
                 <div class="todo__priority todo__priority_filter">
-                    <button class="todo__priority__filter"></button>
-                    <img    class="todo__priority__numbers" src="./img/Numbers.png" alt="Here you could see the beautiful numbers">
+                    <button class="todo__priority__filter todo__priority__filter-up"></button>
+                    <img class="todo__priority__numbers" src="./img/Numbers.png" alt="Here you could see the beautiful numbers">
                     <button class="todo__priority__filter todo__priority__filter-down"></button>
                 </div>
-                <!-- todo filter description and submit -->
-                <input type="text" class="todo__desc__filter">
-                <!-- todo filter actions -->
-                <div class="todo__actions todo__actions_filter">
-
+                <!-- todo filter description and submit 
+                <form name="taskAddForm" action="#!" class="todo__form__filter">
+                </form>
+                -->
+                <input id="taskText" type="text" class="todo__desc todo__desc__filter">
+                <button id="taskAdd" type="submit" class="todo__actions todo__actions_filter"></button>
+            </div>
+            <!-- Task list -->
+            <div class="todo__task">
+                <div class="todo__task__dt">
+                    <span class="todo__task__date">12.03.2022</span>
+                    <span class="todo__task__time">15:40</span>
+                </div>    
+                <div class="todo__task__pr">
+                    <span class="todo__task__pr-val">1</span>
+                    <div class="todo__task__pr__btn">
+                        <button class="todo__task__pr-up"></button>
+                        <button class="todo__task__pr-down"></button>
+                    </div>    
+                </div>
+                <div class="todo__task__desc">
+                    bla bla bla
+                </div>
+                <ul class="todo__task__actions">
+                    <li>
+                        <button class="todo__task__actions_edit"></button> 
+                    </li>
+                    <li>
+                        <button class="todo__task__actions_done"></button> 
+                    </li>
+                    <li>
+                        <button class="todo__task__actions_remove"></button> 
+                    </li>
                 </div>
             </div>
-
         </div>    
     </div>
     <!-- Js -->
-    <script src="./js/loginVerification.js"></script>   
-    <script src="./js/todoList.js"></script>   
     <script src="./js/main.js"></script>   
 </body>
 </html>

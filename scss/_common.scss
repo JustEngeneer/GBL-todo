@@ -30,10 +30,7 @@ input{
 }
 
 .element__on{
-
-    &_block{
-        display: block;
-    }    
+    display: block;
 }
 .element__off{
     display: none;
