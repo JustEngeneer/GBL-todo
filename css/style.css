@@ -758,7 +758,6 @@ input {
   background-image: url("../img/done.png");
   -webkit-background-size: cover;
           background-size: cover;
-  opacity: .4;
 }
 
 .todo__task__actions_remove {
@@ -770,6 +769,34 @@ input {
   background-image: url("../img/remove.png");
   -webkit-background-size: cover;
           background-size: cover;
+}
+
+.task-is-not-done {
+  opacity: .4;
+}
+
+.task-is-done {
+  opacity: 1;
+}
+
+.task__container {
+  position: relative;
+}
+
+.task__container .empty__task__modal {
+  position: absolute;
+  top: 65px;
+  left: 300px;
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  color: white;
+  background-color: #da6767;
+  border: solid 2px darkred;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
 }
 
 /* todo end */

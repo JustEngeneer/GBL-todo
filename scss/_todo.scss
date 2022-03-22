@@ -187,7 +187,6 @@
         background-color: transparent;
         background-image: url('../img/done.png');
         background-size: cover;
-        opacity: .4;
     }
     &_remove{
         width: 45px;
@@ -196,8 +195,32 @@
         background-color: transparent;
         background-image: url('../img/remove.png');
         background-size: cover;
-        
     }
 }
 
+.task-is-not-done{
+    opacity: .4;
+}
+.task-is-done{
+    opacity: 1;
+}
+
+.task__container{
+    position: relative;
+
+    .empty__task__modal{
+        position: absolute;
+        top: 65px;
+        left: 300px;
+        width: 200px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        font-weight: bold;
+        color: white;
+        background-color: rgb(218, 103, 103);
+        border: solid 2px darkred;
+        border-radius: 5px;
+    }
+}
 /* todo end */

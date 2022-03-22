@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
-    <div id = "login" class="element__off">
+    <div id = "login" class="element__on">
         <div class="wrapper__all">
             <h1 class="login__title">Login Page</h1>
             <form action="#!" class="login__form" name="loginForm">
@@ -44,13 +44,17 @@
             </p>
         </div> 
     </div>
-    <div id="todo" class="element__on">
+    <div id="todo" class="todo__container element__off">
         <div class="wrapper__all">
             <!-- todo header -->
             <h2 class="todo__header">TODO LIST</h2>
-
-            <textarea id="taskText" class="todo__new-text" placeholder="The text of your new assignment could be here."></textarea>
-            <button id="taskadd" class="todo__add-button">ADD</button>
+            <div class="task__container">
+                <textarea id="taskText" class="todo__new-text" placeholder="The text of your new assignment could be here."></textarea>
+                <button id="taskAdd" class="todo__add-button">ADD</button>
+                <div id="emptyTask" class="empty__task__modal element__off">
+                    Warning! The task is empty!
+                </div>
+            </div>    
             <!-- todo filter -->
             <div class="todo__filter">
                 <!-- todo filter data -->
@@ -64,14 +68,11 @@
                     <img class="todo__priority__numbers" src="./img/Numbers.png" alt="Here you could see the beautiful numbers">
                     <button class="todo__priority__filter todo__priority__filter-down"></button>
                 </div>
-                <!-- todo filter description and submit 
-                <form name="taskAddForm" action="#!" class="todo__form__filter">
-                </form>
-                -->
+                <!-- todo filter description and submit -->
                 <input id="taskText" type="text" class="todo__desc todo__desc__filter">
                 <button id="taskAdd" type="submit" class="todo__actions todo__actions_filter"></button>
             </div>
-            <!-- Task list -->
+            <!-- Task list 
             <div class="todo__task">
                 <div class="todo__task__dt">
                     <span class="todo__task__date">12.03.2022</span>
@@ -92,13 +93,14 @@
                         <button class="todo__task__actions_edit"></button> 
                     </li>
                     <li>
-                        <button class="todo__task__actions_done"></button> 
+                        <button class="todo__task__actions_done task-is-not-done"></button> 
                     </li>
                     <li>
                         <button class="todo__task__actions_remove"></button> 
                     </li>
                 </div>
             </div>
+            -->
         </div>    
     </div>
     <!-- Js -->
