@@ -104,6 +104,7 @@
 }
 
 .todo__task{
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -223,4 +224,99 @@
         border-radius: 5px;
     }
 }
+
+.modal__windows{
+    position: relative;
+}
+
+.task__edit{
+    position: absolute;
+    top: 0;
+    left: 300px;
+    width: 500px;
+    height: 250px;
+    border: solid 1px darkblue;
+    border-radius: 5px;
+    background-color: white; 
+
+    &__head{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    &__text{
+        width: 90%;
+        height: 60%;
+        margin: 0 25px 20px 25px;
+    }
+    &__buttons{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        .task__edit__cancel{
+            background-color: white;
+            border: 1px solid rgb(24, 125, 207);
+            color:rgb(24, 125, 207);
+
+            &:hover, &:active{
+                background-color: rgb(24, 125, 207);
+                color: white;
+            }
+        }
+        .task__edit__save{
+            background-color: white;
+            border: 1px solid rgb(24, 125, 207);
+            color:rgb(24, 125, 207);
+
+            &:hover, &:active{
+                background-color: rgb(24, 125, 207);
+                color: white;
+            }
+        }
+    }
+}
+
+.task__remove{
+    position: absolute;
+    top: 0;
+    left: 450px;
+    width: 150px;
+    height: 100px;
+    border: solid 1px darkblue;
+    border-radius: 5px;
+    background-color: white; 
+
+    &__head{
+        text-align: center;
+        margin-bottom: 20px;
+    }    
+    &__buttons{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        .task__remove__no{
+            background-color: white;
+            border: 1px solid rgb(24, 125, 207);
+            color:rgb(24, 125, 207);
+
+            &:hover, &:active{
+                background-color: rgb(24, 125, 207);
+                color: white;
+            }
+        }
+        .task__remove__yes{
+            background-color: white;
+            border: 1px solid rgb(24, 125, 207);
+            color:rgb(24, 125, 207);
+
+            &:hover, &:active{
+                background-color: rgb(24, 125, 207);
+                color: white;
+            }
+        }
+    }
+
+}
+
 /* todo end */

@@ -4,11 +4,13 @@ const delayShow = 3 * 1000;
 const storage = window.localStorage;
 
 const $loginForm = document.forms.loginForm;
-//const $taskAddForm = document.forms.taskAddForm;
 const $loginPage = document.getElementById('login');
 const $todoPage  = document.getElementById('todo');
 const $taskAdd   = document.getElementById('taskAdd');
 const $taskText  = document.getElementById('taskText');
+const $taskEdit  = document.getElementById('taskEdit');
+const $textEdit  = document.getElementById('textEdit');
+const $taskRemove  = document.getElementById('taskRemove');
 const $taskContainer = document.getElementById('taskList');
 const $wrongLoginMessage = document.getElementById('wrongLogin');
 const $wrongPasswMessage = document.getElementById('wrongPassw');
@@ -43,7 +45,6 @@ $loginForm.onsubmit = function() {
     if( verValue($loginForm.email.value, emailRegExp, $wrongLoginMessage) && verValue($loginForm.passw.value, passwRegExp, $wrongPasswMessage) ) {
         $loginPage.classList.add('element__off');
         $todoPage.classList.remove('element__off');
-        $todoPage.classList.add('element__on');
         initTodo();
     };
 }
@@ -58,7 +59,6 @@ function initHandler(){
 }  
 
 function add(){
-    const task; 
     if($taskText.value.trim().length === 0){
         $emptyTask.classList.remove('element__off');
         $emptyTask.classList.add('element__on');
@@ -70,13 +70,12 @@ function add(){
         return;
     }
 
-    task = {
+    const task = {
         id: App.items.length,
         priority: 1,
         date: Date.now(),
-        test: $taskText.value.trim(),
+        text: $taskText.value.trim(),
         done: false
-
     };
 
     $taskText.value = '';
@@ -84,6 +83,27 @@ function add(){
     save();
     render();
 }  
+
+function editSave(){
+    const itemIndex = window.activeTaskId;
+    App.items[itemIndex].text = $textEdit.value.trim();
+    $textEdit.value = '';
+    $taskEdit.classList.add('element__off');
+    save();
+    render();
+}
+
+function editCancel(){
+    $textEdit.value = '';
+    $taskEdit.classList.add('element__off');
+}
+
+//для этого примера используем напрямую переданый индекс (айди)
+function edit(itemIndex){
+    window.activeTaskId = itemIndex;
+    $textEdit.value = App.items[itemIndex].text.trim();
+    $taskEdit.classList.remove('element__off');
+}
 
 //для этого примера используем напрямую переданый индекс (айди)
 function done(itemIndex){
@@ -93,16 +113,28 @@ function done(itemIndex){
     render();
 }
 
-//для этого примера используем напрямую переданый индекс (айди)
-remove(itemIndex){
+function removeNo(){
+    $taskRemove.classList.add('element__off');
+}
+
+function removeYes(){
+    const itemIndex = window.activeTaskId;
+
+    $taskRemove.classList.add('element__off');
     App.items.splice(itemIndex,1);
     save();
     render();
 }
 
+//для этого примера используем напрямую переданый индекс (айди)
+function remove(itemIndex){
+    window.activeTaskId = itemIndex;
+    $taskRemove.classList.remove('element__off');
+}
+
 // использование отдельных функций для работы с сохранением и загрузкой данных
 // позволяет легко подменять код внутри (например загружать данные с сервера), 
-// при этом внешний код будет изменятся совсем немного, например, переход на использование
+// при этом внешний код будет изменяться совсем немного, например, переход на использование
 // callback или Promise если есть асинхронность (сетевой запрос) 
 function load(){
     const storage_key = getStorageKey();

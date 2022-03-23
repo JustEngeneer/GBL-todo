@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
-    <div id = "login" class="element__on">
+    <div id = "login">
         <div class="wrapper__all">
             <h1 class="login__title">Login Page</h1>
             <form action="#!" class="login__form" name="loginForm">
@@ -72,35 +72,29 @@
                 <input id="taskText" type="text" class="todo__desc todo__desc__filter">
                 <button id="taskAdd" type="submit" class="todo__actions todo__actions_filter"></button>
             </div>
-            <!-- Task list 
-            <div class="todo__task">
-                <div class="todo__task__dt">
-                    <span class="todo__task__date">12.03.2022</span>
-                    <span class="todo__task__time">15:40</span>
-                </div>    
-                <div class="todo__task__pr">
-                    <span class="todo__task__pr-val">1</span>
-                    <div class="todo__task__pr__btn">
-                        <button class="todo__task__pr-up"></button>
-                        <button class="todo__task__pr-down"></button>
-                    </div>    
+            <!-- Task list -->
+            <div class="modal__windows">
+                <div id="taskList">
                 </div>
-                <div class="todo__task__desc">
-                    bla bla bla
+                <!-- The modal window for editing -->
+                <div id="taskEdit" class="task__edit element__off">
+                    <h3 class="task__edit__head">Edit text</h3>
+                    <textarea id="textEdit" type="text" class="task__edit__text"></textarea>
+                    <div class="task__edit__buttons">
+                        <button class="task__edit__cancel" onclick="editCancel()">CANCEL</button>
+                        <button class="task__edit__save" onclick="editSave()">SAVE</button>
+                    </div>
                 </div>
-                <ul class="todo__task__actions">
-                    <li>
-                        <button class="todo__task__actions_edit"></button> 
-                    </li>
-                    <li>
-                        <button class="todo__task__actions_done task-is-not-done"></button> 
-                    </li>
-                    <li>
-                        <button class="todo__task__actions_remove"></button> 
-                    </li>
+                <!-- The modal window - confirm for removing task -->
+                <div id="taskRemove" class="task__remove element__off">
+                    <h2 class="task__remove__head">Delete item?</h2>
+                    <div class="task__remove__buttons"> 
+                        <button class="task__remove__no" onclick="removeNo()">NO</button>
+                        <button class="task__remove__yes" onclick="removeYes()">YES</button>
+                    </div>
+
                 </div>
             </div>
-            -->
         </div>    
     </div>
     <!-- Js -->

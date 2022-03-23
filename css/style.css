@@ -402,10 +402,6 @@ input {
           border-radius: 7px;
 }
 
-.element__on {
-  display: block;
-}
-
 .element__off {
   display: none;
 }
@@ -610,6 +606,7 @@ input {
 }
 
 .todo__task {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -797,6 +794,116 @@ input {
   border: solid 2px darkred;
   -webkit-border-radius: 5px;
           border-radius: 5px;
+}
+
+.modal__windows {
+  position: relative;
+}
+
+.task__edit {
+  position: absolute;
+  top: 0;
+  left: 300px;
+  width: 500px;
+  height: 250px;
+  border: solid 1px darkblue;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background-color: white;
+}
+
+.task__edit__head {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.task__edit__text {
+  width: 90%;
+  height: 60%;
+  margin: 0 25px 20px 25px;
+}
+
+.task__edit__buttons {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+
+.task__edit__buttons .task__edit__cancel {
+  background-color: white;
+  border: 1px solid #187dcf;
+  color: #187dcf;
+}
+
+.task__edit__buttons .task__edit__cancel:hover, .task__edit__buttons .task__edit__cancel:active {
+  background-color: #187dcf;
+  color: white;
+}
+
+.task__edit__buttons .task__edit__save {
+  background-color: white;
+  border: 1px solid #187dcf;
+  color: #187dcf;
+}
+
+.task__edit__buttons .task__edit__save:hover, .task__edit__buttons .task__edit__save:active {
+  background-color: #187dcf;
+  color: white;
+}
+
+.task__remove {
+  position: absolute;
+  top: 0;
+  left: 450px;
+  width: 150px;
+  height: 100px;
+  border: solid 1px darkblue;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background-color: white;
+}
+
+.task__remove__head {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.task__remove__buttons {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+
+.task__remove__buttons .task__remove__no {
+  background-color: white;
+  border: 1px solid #187dcf;
+  color: #187dcf;
+}
+
+.task__remove__buttons .task__remove__no:hover, .task__remove__buttons .task__remove__no:active {
+  background-color: #187dcf;
+  color: white;
+}
+
+.task__remove__buttons .task__remove__yes {
+  background-color: white;
+  border: 1px solid #187dcf;
+  color: #187dcf;
+}
+
+.task__remove__buttons .task__remove__yes:hover, .task__remove__buttons .task__remove__yes:active {
+  background-color: #187dcf;
+  color: white;
 }
 
 /* todo end */
