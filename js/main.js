@@ -12,6 +12,7 @@ const $taskEdit  = document.getElementById('taskEdit');
 const $textEdit  = document.getElementById('textEdit');
 const $taskRemove  = document.getElementById('taskRemove');
 const $taskContainer = document.getElementById('taskList');
+const $textFilter = document.getElementById('taskTextFilter');
 const $wrongLoginMessage = document.getElementById('wrongLogin');
 const $wrongPasswMessage = document.getElementById('wrongPassw');
 const $emptyTask = document.getElementById('emptyTask');
@@ -57,6 +58,19 @@ function initHandler(){
        if(e.keyCode === 13) add(); 
     });
 }  
+
+function sortTasks(fieldName, mode){
+    const byField = function(fieldName, mode){
+        if(mode == 1){  //  По возрастанию
+            return (a,b) => a[fieldName] > b[fieldName] ? 1 : -1;
+        } else {//  По убыванию
+            return (a,b) => a[fieldName] < b[fieldName] ? 1 : -1;
+        }    
+    }
+    App.items.sort(byField(fieldName, mode));
+    save();
+    render();
+}
 
 function add(){
     if($taskText.value.trim().length === 0){
@@ -149,7 +163,6 @@ function save(){
     const storage_key = getStorageKey();
     const saveData = JSON.stringify(App.items);
     storage.setItem(storage_key, saveData);
-
 }
 
 /* действия связанные с форматирование текста, формированием каких то обьектов лучше всего
@@ -192,8 +205,8 @@ function save(){
         <div class="todo__task__pr">
             <span class="todo__task__pr-val">${String(task.priority)}</span>
             <div class="todo__task__pr__btn">
-                <button class="todo__task__pr-up"></button>
-                <button class="todo__task__pr-down"></button>
+                <button class="todo__task__pr-up" onclick="changePriority(1,${index})"></button>
+                <button class="todo__task__pr-down" onclick="changePriority(-1,${index})"></button>
             </div>    
         </div>
         <div class="todo__task__desc">${task.text.trim()}</div>
@@ -211,15 +224,30 @@ function save(){
   return $task;
 }
 
+function changePriority(valueForChange, itemIndex){
+    let curPriority = App.items[itemIndex].priority;
+    curPriority += valueForChange;
+    if(curPriority < 1) curPriority = 9;
+    else if(curPriority > 9) curPriority = 1; 
+
+    App.items[itemIndex].priority = curPriority;
+    save();
+    render();
+}
 //функция занимается только отрисовкой, любые изменнения в данных вызовут перерисовку 
 //всего списка тасков, с этим нужно быть осторожным что бы не вызвать проблем с скоростью работы
 //в данном примере этого достаточно но в рабочих приложениях нужно это учитывать, и не
 // перерисовывать все без необходимости (Angular и другие фреймворки берут это на себя,
 // вы работает в основном же с данными)
-function render(){
+function render(mode = 1){  //  1 - выводим все, 2 - выводим все согласно выражению в фильтре
+    const textFilterVal = $textFilter.value.trim();
+
     $taskContainer.innerHTML = '';  // clear task list before redrawing
     for (let i = 0; i < App.items.length; i++){
         const item = genItem(App.items[i],i);
+        if(mode == 2 && textFilterVal.length > 0 && App.items[i].text.indexOf(textFilterVal) == -1) {
+            continue; 
+        }    
         $taskContainer.appendChild(item);
     }
 }

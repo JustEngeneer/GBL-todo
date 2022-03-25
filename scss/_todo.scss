@@ -90,7 +90,7 @@
         height: 40px;
     }
     .todo__actions{
-        width: 15%;
+        width: 9%;
         height: 40px;
         margin-left: 10px;
         background: transparent;
@@ -101,6 +101,29 @@
     }
 
 //    }
+    .todo__text__sort{
+        width: 4%;
+        height: 40px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        &-up{
+            width: 20px;
+            height: 20px;
+            background-image: url('../img/arrow-up.png');
+            background-size: cover;
+        }
+        &-down{
+            width: 20px;
+            height: 20px;
+            background-image: url('../img/arrow-down.png');
+            background-size: cover;
+        }
+    }
+
+
 }
 
 .todo__task{
@@ -230,9 +253,9 @@
 }
 
 .task__edit{
-    position: absolute;
-    top: 0;
-    left: 300px;
+    position: fixed;
+    top: 300px;
+    left: 500px;
     width: 500px;
     height: 250px;
     border: solid 1px darkblue;
@@ -277,9 +300,9 @@
 }
 
 .task__remove{
-    position: absolute;
-    top: 0;
-    left: 450px;
+    position: fixed;
+    top: 300px;
+    left: 600px;
     width: 150px;
     height: 100px;
     border: solid 1px darkblue;

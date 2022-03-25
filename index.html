@@ -9,9 +9,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <!--  There are some troubles with this manifest
-    <link rel="manifest" href="img/favicon/site.webmanifest">
-    -->    
     <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="shortcut icon" href="img/favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#da532c">
@@ -59,18 +56,22 @@
             <div class="todo__filter">
                 <!-- todo filter data -->
                 <div class="todo__data">
-                    <button class="todo__data__filter todo__data__filter-up"></button>
-                    <button class="todo__data__filter todo__data__filter-down"></button>
+                    <button class="todo__data__filter todo__data__filter-up" onclick="sortTasks('date',1)"></button>
+                    <button class="todo__data__filter todo__data__filter-down" onclick="sortTasks('date',2)"></button>
                 </div>
                 <!-- todo filter priority -->
                 <div class="todo__priority todo__priority_filter">
-                    <button class="todo__priority__filter todo__priority__filter-up"></button>
+                    <button class="todo__priority__filter todo__priority__filter-up" onclick="sortTasks('priority',1)"></button>
                     <img class="todo__priority__numbers" src="./img/Numbers.png" alt="Here you could see the beautiful numbers">
-                    <button class="todo__priority__filter todo__priority__filter-down"></button>
+                    <button class="todo__priority__filter todo__priority__filter-down" onclick="sortTasks('priority',2)"></button>
                 </div>
                 <!-- todo filter description and submit -->
-                <input id="taskText" type="text" class="todo__desc todo__desc__filter">
-                <button id="taskAdd" type="submit" class="todo__actions todo__actions_filter"></button>
+                <input id="taskTextFilter" type="text" class="todo__desc todo__desc__filter">
+                <div class="todo__text__sort">
+                    <button class="todo__text__sort-up" onclick="sortTasks('text',1)"></button>
+                    <button class="todo__text__sort-down" onclick="sortTasks('text',2)"></button>
+                </div>    
+                <button id="taskTextFilterBtn" type="submit" class="todo__actions todo__actions_filter" onclick="render(2)"></button>
             </div>
             <!-- Task list -->
             <div class="modal__windows">

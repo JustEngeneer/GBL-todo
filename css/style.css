@@ -594,7 +594,7 @@ input {
 }
 
 .todo__filter .todo__actions {
-  width: 15%;
+  width: 9%;
   height: 40px;
   margin-left: 10px;
   background: transparent;
@@ -603,6 +603,43 @@ input {
           background-size: 38px 38px;
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+.todo__filter .todo__text__sort {
+  width: 4%;
+  height: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo__filter .todo__text__sort-up {
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/arrow-up.png");
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+.todo__filter .todo__text__sort-down {
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/arrow-down.png");
+  -webkit-background-size: cover;
+          background-size: cover;
 }
 
 .todo__task {
@@ -801,9 +838,9 @@ input {
 }
 
 .task__edit {
-  position: absolute;
-  top: 0;
-  left: 300px;
+  position: fixed;
+  top: 300px;
+  left: 500px;
   width: 500px;
   height: 250px;
   border: solid 1px darkblue;
@@ -857,9 +894,9 @@ input {
 }
 
 .task__remove {
-  position: absolute;
-  top: 0;
-  left: 450px;
+  position: fixed;
+  top: 300px;
+  left: 600px;
   width: 150px;
   height: 100px;
   border: solid 1px darkblue;
