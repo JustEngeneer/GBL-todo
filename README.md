@@ -1,1 +1,1 @@
-# Training project with JS only.
+# Training project with Angular 2.12.
