@@ -1,1 +1,1 @@
-# Training project with Angular 2.12.
+# Training project with Angular 12.
